@@ -1,9 +1,11 @@
 import { createStore } from "vuex";
+import user from "./user";
 
+// state属性和getter属性已删除
 export default createStore({
-  state: {},
-  getters: {},
   mutations: {},
   actions: {},
-  modules: {},
+  modules: {
+    user,
+  },
 });
