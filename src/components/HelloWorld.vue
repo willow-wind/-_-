@@ -1,112 +1,11 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
-          target="_blank"
-          rel="noopener"
-          >router</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex"
-          target="_blank"
-          rel="noopener"
-          >vuex</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript"
-          target="_blank"
-          rel="noopener"
-          >typescript</a
-        >
-      </li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
-    </ul>
+  <div class="container">
+    <div class="hello">
+      <h1>欢迎访问用户管理系统！</h1>
+      <p>
+        该系统包含基本的增加、删除、编辑、查找用户和分页浏览的功能。拥有登录注册和权限管理等模块。前端采用vue框架，后端采用springboot框架和MySQL数据库。
+      </p>
+    </div>
   </div>
 </template>
 
@@ -115,26 +14,40 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "HelloWorld",
-  props: {
-    msg: String,
-  },
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* 垂直居中 */
+  background-color: #f5f5f5; /* 背景颜色 */
+  padding: 20px; /* 容器内边距 */
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.hello {
+  max-width: 600px; /* 最大宽度限制 */
+  padding: 40px; /* 内容内边距 */
+  background-color: #ffffff; /* 白色背景 */
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  text-align: center; /* 内容居中 */
+  font-family: "Arial", sans-serif; /* 字体样式 */
+  color: #333; /* 字体颜色 */
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+h1 {
+  margin-bottom: 20px;
+  color: #007bff; /* 标题颜色 */
+  font-size: 28px;
+  font-weight: bold;
 }
-a {
-  color: #42b983;
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555; /* 段落文字颜色 */
 }
 </style>

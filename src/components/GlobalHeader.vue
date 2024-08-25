@@ -54,7 +54,7 @@
                 <icon-idcard />
               </template>
               <template #default>
-                <a-anchor-link href="/user/info">个人信息</a-anchor-link>
+                <a-anchor-link @click="doUpdate">个人信息</a-anchor-link>
               </template>
             </a-doption>
             <a-doption>
@@ -99,7 +99,7 @@ import {
   IconPoweroff,
   IconUserAdd,
 } from "@arco-design/web-vue/es/icon";
-import { LoginUserVO, UserControllerService } from "../../generated";
+import { LoginUserVO, User, UserControllerService } from "../../generated";
 
 const router = useRouter();
 const store = useStore();
@@ -132,7 +132,7 @@ console.log();
 
 setTimeout(() => {
   store.dispatch("user/getLoginUser", {
-    userName: "鱼皮管理员",
+    userName: "管理员",
     userRole: ACCESS_ENUM.ADMIN,
   });
 }, 3000);
@@ -157,6 +157,15 @@ const logout = async () => {
 const loginUserInfo: LoginUserVO = computed(
   () => store.state.user?.loginUser
 ) as LoginUserVO;
+
+const doUpdate = (user: User) => {
+  router.push({
+    path: "/info",
+    query: {
+      id: user.id,
+    },
+  });
+};
 </script>
 
 <style scoped>

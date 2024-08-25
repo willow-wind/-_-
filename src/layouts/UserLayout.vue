@@ -4,7 +4,7 @@
       <a-layout-header class="header">
         <a-space>
           <img src="../assets/logo.png" class="logo" />
-          <div class="title">遥岑编程</div>
+          <div class="title">用户管理系统</div>
         </a-space>
       </a-layout-header>
       <a-layout-content class="content">
@@ -20,10 +20,9 @@
 <style scoped>
 .title {
   font-size: 24px; /* 字体大小 */
-  color: #ffff99; /* 字体颜色 */
+  color: black; /* 字体颜色 */
   margin-left: 16px;
   font-weight: bold; /* 加粗 */
-  text-shadow: 2px 2px 4px #000000; /* 阴影效果，参数分别为：水平偏移、垂直偏移、模糊半径、颜色 */
 }
 
 #userLayout {
